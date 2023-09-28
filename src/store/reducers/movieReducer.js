@@ -1,9 +1,9 @@
 import { movies } from "../../movies";
-const movieInitial = {
+const stateInitial = {
   sira: 0,
   movies: movies,
 };
-const reducer = (state = movieInitial, action) => {
+const reducer = (state = stateInitial, action) => {
   const { type, payload } = action;
   switch (type) {
     case "NEXT_SİRA":
