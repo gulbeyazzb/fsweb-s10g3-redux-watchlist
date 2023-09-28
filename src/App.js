@@ -6,9 +6,11 @@ import {
   nextSiraAction,
   prevSiraAction,
 } from "./store/actions/movieReducerAction";
+import addfavMovieAction from "./store/actions/favMovieReducerAction";
 
 function App() {
   const sira = useSelector((store) => store.movies.sira);
+  const movies = useSelector((store) => store.movies.movies);
   const favMovies = useSelector((store) => store.favMovies);
   const dispatch = useDispatch();
 
@@ -20,7 +22,9 @@ function App() {
     dispatch(prevSiraAction());
   }
 
-  const addFavListHandler = () => {};
+  const addFavListHandler = () => {
+    dispatch(addfavMovieAction(movies[sira]));
+  };
 
   return (
     <div className="wrapper max-w-2xl mx-auto">
