@@ -1,9 +1,16 @@
-const ADD_FAVMOVIE = "it adds the film to myList";
+export const ADD_FAVMOVIE = "it adds the film to myList";
+export const DELETE_FAVMOVIE = "it deletes the film from myList";
 
-const addfavMovieAction = (movie) => {
+export const addfavMovieAction = (movie) => {
   return {
     type: ADD_FAVMOVIE,
     payload: movie,
   };
 };
-export default addfavMovieAction;
+
+export const deleteFavoriteMovie = (id) => {
+  return {
+    type: DELETE_FAVMOVIE,
+    payload: id,
+  };
+};

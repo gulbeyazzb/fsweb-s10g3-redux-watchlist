@@ -1,4 +1,7 @@
 import { movies } from "../../movies";
+import { NEXT_SİRA } from "../actions/movieReducerAction";
+import { PREV_SİRA } from "../actions/movieReducerAction";
+
 const stateInitial = {
   sira: 0,
   movies: movies,
@@ -6,13 +9,13 @@ const stateInitial = {
 const reducer = (state = stateInitial, action) => {
   const { type, payload } = action;
   switch (type) {
-    case "NEXT_SİRA":
+    case NEXT_SİRA:
       return {
         ...state,
         sira: state.sira + 1,
       };
 
-    case "PREV_SİRA":
+    case PREV_SİRA:
       return {
         ...state,
         sira: state.sira - 1,

@@ -1,8 +1,11 @@
 import { useDispatch } from "react-redux";
+import { deleteFavoriteMovie } from "../store/actions/favMovieReducerAction";
 
 export default function FavMovie({ title, id }) {
   const dispatch = useDispatch();
-  const removeFavoriteMovie = () => {};
+  const removeFavoriteMovie = () => {
+    dispatch(deleteFavoriteMovie(id));
+  };
 
   return (
     <div className="flex p-3 pl-4 bg-white mb-2 shadow items-center group">

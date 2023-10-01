@@ -6,7 +6,7 @@ import {
   nextSiraAction,
   prevSiraAction,
 } from "./store/actions/movieReducerAction";
-import addfavMovieAction from "./store/actions/favMovieReducerAction";
+import { addfavMovieAction } from "./store/actions/favMovieReducerAction";
 
 function App() {
   const sira = useSelector((store) => store.movies.sira);
